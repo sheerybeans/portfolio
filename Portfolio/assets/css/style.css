@@ -1,0 +1,73 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.container{
+	height: 100vh;
+	background-color: skyblue;
+	position: relative;
+}
+.nav-bar {
+    background-color: red;
+    line-height: 2rem;
+    float: left;
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav-bar-content {
+    border: 1px solid #000000;
+    float: left;
+    width: 100%;
+    max-width: 1244px;
+}
+.projects{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    float: left;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+    border:1px solid #000000;
+}
+.projects-list-box {
+    float: left;
+}
+.projects-content {
+    display: flex;
+    align-items: center;
+}
+
+div#capstone-one {
+    background-color: blue;
+    min-height: 200px;
+    min-width: 200px;
+}
+div#capstone-two {
+    background-color: red;
+    min-height: 200px;
+    min-width: 200px;
+}
+div#portfolio {
+    background-color: green;
+    min-height: 300px;
+    min-width: 200px;
+    z-index: 5;
+}
+div#others {
+    background-color: pink;
+    min-height: 360px;
+    min-width: 200px;
+}
+div#capstone-three {
+    background-color: yellow;
+    min-height: 300px;
+    width: 200px;
+}
