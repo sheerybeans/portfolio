@@ -2,7 +2,7 @@
 	margin: 0;
 	padding:0;
 	box-sizing: border-box;
-}
+} 
 .clear:after{
 	content: "";
 	display: block;
@@ -10,64 +10,206 @@
 }
 .container{
 	height: 100vh;
-	background-color: skyblue;
+	background-color: #000000;
 	position: relative;
 }
+h2{
+    color: #fefefe;
+}
 .nav-bar {
-    background-color: red;
+    background-color: transparent;
     line-height: 2rem;
-    float: left;
+    position: absolute;
+    top: 0;
     padding: 18px;
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 .nav-bar-content {
-    border: 1px solid #000000;
     float: left;
-    width: 100%;
-    max-width: 1244px;
+    text-align: center;
+    font-family: "Nunito",sans-serif;
+    text-transform: uppercase;
 }
-.projects{
+
+.left-content{
+    height: 100vh;
+    float: left;
+    position: relative;
+    width: 50%;
+}
+.left-content-image img{
+    width: 100%;
+    height: 100%;
+}
+.right-content{
+    float: left;
+    width: 50%;
+    height: 100vh; 
+}
+.front.dev-name{
+    background-color: #000000;
+}
+.dev-name {
+    background: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.dev-name h2 {
     position: absolute;
     top: 50%;
-    left: 50%;
-    float: left;
+    bottom: 50%;
     margin-right: -50%;
-    transform: translate(-50%,-50%);
-    border:1px solid #000000;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
 }
-.projects-list-box {
+/*----------------------------------------------------------------------Right Content*/
+html { height: 100%; overflow: hidden; }
+body { background: black; margin: 0; width: 100%; height: 100%; }
+
+.scene {
+    width: 100%;
+    height: 100vh;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1.5s -webkit-transform;
+  transition: 1.5s transform;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;  
+  -webkit-transform-origin: left center;  
+  -ms-transform-origin: left center;  
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#ccc));
+  background: -webkit-linear-gradient(top left, #fff, #ccc);
+  background: linear-gradient(to bottom right, #fff, #ccc);
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.page.active {
+  z-index: 1;
+}
+.page.flipped {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+
+.front img{
+    height: 100%;
+    width: 100%;
+}
+
+.back img{
+    height: 100%;
+    width: 100%;
+}
+.footer{
+    background-color: transparent;
+    line-height: 2rem;
+    position: absolute;
+    bottom: 0;
+    padding: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    font-family: "Nunito",sans-serif;
+    text-transform: uppercase;
+}
+
+.about-me{
+    position: absolute;
+    top:-100vh;
+    height: 100vh;
+    background-color: #000000;
+}
+.about-me-content {
+    height: 100%;
+    float: left;
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.box-content-left{
+    background-color: yellow;
+    width: 300px;
+    height: 300px;
     float: left;
 }
-.projects-content {
+.my-strength{
+    position: absolute;
+    bottom:-100vh;
+    height: 100vh;
+    background-color: skyblue;
+}
+.box-content-left {
+    background-color: #fefefe;
+    min-width: 500px;
+    min-height: 500px;
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 0;
+}
+.box-content-left img{
+    width: 100%;
+    height: 100%;
+}
+.about-me-text {
+    float: left;
+    width: 50%;
+    background-color: #000000;
+    height: 100%;
     display: flex;
     align-items: center;
 }
-
-div#capstone-one {
-    background-color: blue;
-    min-height: 200px;
-    min-width: 200px;
+.about-me-text-content {
+    background-color: #fefefe;
+    width: 500px;
+    height: 500px;
+    float: left;
+    position: relative;
+    margin: 0;
 }
-div#capstone-two {
-    background-color: red;
-    min-height: 200px;
-    min-width: 200px;
-}
-div#portfolio {
-    background-color: green;
-    min-height: 300px;
-    min-width: 200px;
-    z-index: 5;
-}
-div#others {
-    background-color: pink;
-    min-height: 360px;
-    min-width: 200px;
-}
-div#capstone-three {
-    background-color: yellow;
-    min-height: 300px;
-    width: 200px;
+p{
+    color: #fefefe;
 }
