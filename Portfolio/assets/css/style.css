@@ -12,6 +12,7 @@
 	height: 100vh;
 	background-color: #000000;
 	position: relative;
+  overflow: hidden;
 }
 h2{
     color: #fefefe;
@@ -30,10 +31,18 @@ h2{
 .nav-bar-content {
     float: left;
     text-align: center;
-    font-family: "Nunito",sans-serif;
     text-transform: uppercase;
 }
-
+.nav-bar-content h2 {
+    font-family: "Nunito",sans-serif;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+.nav-bar-content h2:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
 .left-content{
     height: 100vh;
     float: left;
@@ -44,10 +53,72 @@ h2{
     width: 100%;
     height: 100%;
 }
-.right-content{
+.right-content {
     float: left;
     width: 50%;
-    height: 100vh; 
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.left-content-text {
+    position: absolute;
+    top: 35%;
+    bottom: 35%;
+    width: 100%;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Nunito",sans-serif;
+    height: 100%;
+    text-transform: uppercase;
+}
+.left-content-text h2 {
+    font-family: "Nunito", sans-serif;
+    cursor: pointer;
+}
+.left-content-text h2:hover {
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
+.right-content-dev-name {
+    left: 50%;
+    font-family: "Montserrat",sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+.right-content-dev-name h2 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+.right-content-text {
+    position: absolute;
+    top: 35%;
+    bottom: 35%;
+    right: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Nunito",sans-serif;
+    text-transform: uppercase;
+}
+.right-content-text h2:hover {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
+.footer h2 {
+    -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    -webkit-mask-size: 200%;
+    animation: shine 2s linear infinite;
+}
+.right-content-text {
+    font-family: "Nunito",sans-serif;
+    cursor: pointer;
 }
 .front.dev-name{
     background-color: #000000;
@@ -67,10 +138,70 @@ h2{
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
 }
+#close-about-me{
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    top: 0;
+    color: #fefefe;
+    font-size: 3rem;
+    margin: 15px;
+}
+#close-portfolio{
+    position: absolute;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    color: #fefefe;
+    font-size: 3rem;
+    margin: 15px;
+}
+#close-contact{
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    top: 0;
+    color: #fefefe;
+    font-size: 3rem;
+    margin: 15px;
+}
+#close-strength{
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    top: 0;
+    color: #fefefe;
+    font-size: 3rem;
+    margin: 15px;
+}
+#close-about-me{
+    position: absolute;
+    z-index: 30;
+    right:0; 
+    top: 0;
+    margin:10px;
+}
+div#close-about-me:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+    color: #f6483b;
+}
+div#close-contact:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    color: #f6483b;
+}
+div#close-strength:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    color: #f6483b;
+}
+div#close-portfolio:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+    color: #f6483b;
+}
 /*----------------------------------------------------------------------Right Content*/
-html { height: 100%; overflow: hidden; }
-body { background: black; margin: 0; width: 100%; height: 100%; }
-
 .scene {
     width: 100%;
     height: 100vh;
@@ -151,21 +282,104 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
     font-family: "Nunito",sans-serif;
     text-transform: uppercase;
 }
-
+.footer h2 {
+    font-family: "Nunito",sans-serif;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
 .about-me{
     position: absolute;
     top:-100vh;
     height: 100vh;
+    width: 100%;
     background-color: #000000;
+    z-index: 20;
+}
+.shine-text{
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
+}
+@keyframes shine {
+  from { -webkit-mask-position: 150%; }
+  to { -webkit-mask-position: -50%; }
 }
 .about-me-content {
     height: 100%;
     float: left;
     position: relative;
+    width: 100%;
+}
+.about-me-text {
+    width: 100%;
+    float: left;
+    max-height: 50%;
+    padding: 15px;
+} 
+.about-me-text button {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    background-color: #f6483b;
+    border: 1px solid #f6483b;
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.about-me-text button:hover {
+    color: #f6483b;
+    background-color: #111111;
+}
+.about-me-content-right{
     width: 50%;
+    background-color: #000000;
+    align-items: center;
+    height: 100%;
+    float: left;
+    display: block;
+    justify-content: flex-start;
+}
+.about-me-image {
+    max-width: 50%;
+    float: right;
+    max-height: 50%;
+}
+.about-me-image img{
+  height: 100%;
+  width: 100%;
+}
+.about-me-content-left {
+    width: 50%;
+    background-color: #000000;
+    height: 100%;
+    float: left;
+    position: relative;
     display: flex;
     align-items: center;
-    margin: 0;
+}
+.about-me-text h2 {
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+    margin: 10px;
+    font-weight: 400;
+}
+.about-me-text p {
+    font-size: 20px;
+    font-family: "Nunito",sans-serif;
+    overflow: hidden;
+}
+.about-me-body-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 2px #fefefe solid;
+}
+.about-me-body-content-right{
+  width: 50%;
+  float: left;
+  background-color: orange;
+  height: 100%;
 }
 .box-content-left{
     background-color: yellow;
@@ -176,9 +390,50 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
 .my-strength{
     position: absolute;
     bottom:-100vh;
+    width: 100%;
     height: 100vh;
-    background-color: skyblue;
+    z-index: 20;
+    text-transform: uppercase;
+    background-color: #000000;
 }
+.my-strength-content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.portfolio-header{
+    width: 100%;
+    min-height: 50px;
+    background-color: pink;
+    text-transform: uppercase;
+    padding: 14px 50px 16px 50px;
+    float: left;
+}
+
+.my-strength-header h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+.contact-header{
+    width: 100%;
+    min-height: 50px;
+    background-color: #000000;
+    text-transform: uppercase;
+    padding: 14px 50px 16px 50px;
+    float: left;
+}
+.about-me-header{
+    width: 100%;
+    min-height: 50px;
+    background-color: #000000;
+    text-transform: uppercase;
+    padding: 14px 50px 16px 50px;
+    float: left;
+    position: absolute;
+}
+
 .box-content-left {
     background-color: #fefefe;
     min-width: 500px;
@@ -194,14 +449,7 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
     width: 100%;
     height: 100%;
 }
-.about-me-text {
-    float: left;
-    width: 50%;
-    background-color: #000000;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
+
 .about-me-text-content {
     background-color: #fefefe;
     width: 500px;
@@ -210,6 +458,473 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
     position: relative;
     margin: 0;
 }
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    position: absolute;
+    left: -100%;
+    z-index: 20;
+}
+.contact {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    position: absolute;
+    right:-100%;
+    z-index: 20;
+}
 p{
     color: #fefefe;
+}
+.portfolio-right-side{
+    float: left;
+    width:100%;
+    height: 100vh;
+    position: relative;
+}
+.portfolio-right-content{
+    float: left;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+}
+.portfolio-book-content{
+     float: left;
+    width:50%;
+    height: 100vh;
+}
+.about-me-right-content {
+    height: 100%;
+    width: 50%;
+    float: left;
+    border: 4px solid skyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me-right-content-text {
+    max-width: 500px;
+    max-height: 500px;
+    border: 2px solid grey;
+}
+.about-me-right-content-text-header {
+    text-align: center;
+}
+.about-me-right-content-text-header h3{
+    color: #fefefe;
+}
+.about-me-right-content-box-buttons {
+    margin: 10px;
+}
+button.download {
+    float: right;
+}
+.contact-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.contact-content-form {
+    width: 100%;
+    max-height: 100vh;
+}
+.box-content-my-strength h2 {
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    margin: 15px;
+}
+.center-text{
+  text-align: center;
+}
+small{
+  color: #fefefe;
+}
+.right-content-dev-name span {
+    color: #fefefe;
+    display: block;
+    font-size: 13px;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+    margin: 10px;
+    letter-spacing: 5px;
+}
+.contact-content-form h3{
+    text-align: center;
+}
+.contact-content-form-header-left{
+    float: left;
+    width: 50%;
+    max-height: 50%;
+    padding: 20px;
+}
+.contact-content-map{
+    width: 100%;
+    height: 50vh;
+    float: left;
+}
+.contact-content-form-header-right{
+    float: left;
+    width: 50%;
+    padding: 15px;
+    height: 100%;
+}
+input#subject,input#submit {
+    display: block;
+}
+
+form {
+    margin: 0 auto;
+}
+.input-boxes {
+    width: 100%;
+    height: 100%;
+}
+input[type="text"] {
+    width: 49%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #111111;
+    border: none;
+}
+input[type="email"] {
+    width: 49%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #111111;
+    border: none;
+}
+textarea#message {
+    width: 49%;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #111111;
+    border: none;
+}
+input#submit {
+    padding: 15px;
+    width: 8rem;
+    background-color: #f6483b;
+    border: 1px solid #f6483b;
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+input#submit:hover {
+    color: #f6483b;
+    background-color: #111111;
+}
+.my-strength-left-content{
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+
+.box-content-my-strength {
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase
+}
+.box-content-strength{
+  height: 250px;
+  width: 45%;
+  float: left;
+  margin:5px;
+  border-radius: 100%;
+}
+
+.box-text-content h2 {
+    text-align: center;
+    margin: 10px;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+}
+.my-strength-footer h2 {
+    text-align: center;
+    margin: 10px;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+}
+.my-strength-boxes img {
+    width: 100%;
+    height: 100%;
+}
+.box-image-content{
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+}
+.box-text-content{
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.box-image-content img{
+    max-width: 100%;
+    max-height: 250px;
+}
+.contact-content-form-header-right h2 {
+    margin-bottom: 15px;
+}
+.about-me-text p {
+    color: #666;
+}
+.strength-box-holder{
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.contact-content-form-header h2 {
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+/*----------------------------------------------------------------------slideshow-Strength*/
+.pic-wrapper {
+    position: absolute;
+    width: 25%;
+    height: 50%;
+    overflow: hidden;
+}
+
+figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /*animation*/
+  
+  animation: slideShow 24s linear infinite 0s;
+  -o-animation: slideShow 24s linear infinite 0s;
+  -moz-animation: slideShow 24s linear infinite 0s;
+  -webkit-animation: slideShow 24s linear infinite 0s;
+}
+
+figurecaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+}
+
+.pic-1 {
+  opacity: 1;
+  background: url(../images/s1.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-2 {
+  animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -moz--animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  background: url(../images/s2.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-3 {
+  animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -moz--animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  background: url(../images/s3.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-4 {
+  animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -moz--animation-delay: 18s;
+  -webkit-animation-delay: 18s;
+  background: url(../images/s4.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* keyframes*/
+
+@keyframes 
+slideShow {  0% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ transform:scale(1.1);
+ -ms-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transformm:scale(1);
+}
+}
+ @-o-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -o-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -o-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -o-transformm:scale(1);
+}
+}
+ @-moz-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -moz-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -moz-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -moz-transformm:scale(1);
+}
+}
+ @-webkit-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -webkit-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -webkit-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transformm:scale(1);
+}
+}
+/*---------------------------------------------------------------------Portfolio*/
+html { height: 100%; overflow: hidden; }
+body { background: black; margin: 0; width: 100%; height: 100%; }
+
+.scene {
+    width: 100%;
+    height: 100vh;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+}
+.book {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.page {
+  cursor: pointer;
+  position: absolute;
+  color: black;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 1.5s -webkit-transform;
+  transition: 1.5s transform;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;  
+  -webkit-transform-origin: left center;  
+  -ms-transform-origin: left center;  
+  transform-origin: left center;
+}
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
+  background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#ccc));
+  background: -webkit-linear-gradient(top left, #fff, #ccc);
+  background: linear-gradient(to bottom right, #fff, #ccc);
+}
+.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.page.active {
+  z-index: 1;
+}
+.page.flipped {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+.page.flipped:last-of-type {
+  z-index: 1;
+}
+
+.front img{
+    height: 100%;
+    width: 100%;
+}
+
+.back img{
+    height: 100%;
+    width: 100%;
 }
