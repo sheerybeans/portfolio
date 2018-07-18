@@ -37,6 +37,7 @@ h2{
     font-family: "Nunito",sans-serif;
     letter-spacing: 5px;
     cursor: pointer;
+    margin: 20px;
 }
 .nav-bar-content h2:hover {
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -75,6 +76,7 @@ h2{
 .left-content-text h2 {
     font-family: "Nunito", sans-serif;
     cursor: pointer;
+    margin: 20px;
 }
 .left-content-text h2:hover {
     -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
@@ -105,16 +107,35 @@ h2{
     text-orientation: upright;
     font-family: "Nunito",sans-serif;
     text-transform: uppercase;
+    height: 100%;
+}
+.right-content-text-mobile {
+    position: absolute;
+    top: 35%;
+    bottom: 35%;
+    right: 0;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: "Nunito",sans-serif;
+    text-transform: uppercase;
+    height: 100%;
+}
+.back-page-one-body-content-lakawon-text p {
+    font-family: "Nunito",sans-serif;
 }
 .right-content-text h2:hover {
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     -webkit-mask-size: 200%;
     animation: shine 2s linear infinite;
 }
+.right-content-text h2 {
+    margin: 20px;
+}
 .footer h2 {
     -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
     -webkit-mask-size: 200%;
     animation: shine 2s linear infinite;
+    margin:20px;
 }
 .right-content-text {
     font-family: "Nunito",sans-serif;
@@ -129,15 +150,145 @@ h2{
     height: 100vh;
     position: relative;
 }
-.dev-name h2 {
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    margin-right: -50%;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
+.portfolio-header-title {
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    text-align: center;
 }
+.portfolio-header-title h2 {
+    font-size: 5rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+.portfolio-header-title h4 {
+    color: #fefefe;
+    font-size: 1rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    float: left;
+}
+.portfolio-header-title h3 {
+    color: #f6483b;
+    font-size: 1rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+    float: right;
+}
+.front.cover-page {
+    background: #000000;
+}
+.cover-page-layout {
+    height: 100vh;
+    width: 100%;
+    float: left;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fefefe;
+}
+.back-page-one-body-content{
+    width: 80%;
+    min-height: 15rem;
+    max-height: 15rem;
+    float: left;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.back-page-one-body-content-lakawon{
+  float: left;
+  width: 50%;
+  max-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-page-one-body-content-juanride{
+  float: left;
+  width: 50%;
+  max-height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-page-one-body-content-juanride img {
+    height: 5rem !important;
+    width: 10rem !important;
+}
+.back-page-one-body-content-lakawon img {
+    height: 10rem !important;
+    width: 10rem !important;
+}
+.back-page-one-body-content-lakawon-text{
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.back-page-one-body-content-juanride-text{
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.back-page-one-body-content-juanride-text p {
+    font-family: "Nunito",sans-serif;
+}
+.front-page-two-header{
+    text-align: center;
+    margin: 15px;
+}
+.front {
+    background: #000000;
+}
+.front-page-two-header h2{
+    font-size: 2rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+.front.page-two {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.front-page-two-header p {
+    font-family: "Nunito",san-serif;
+    font-size: 1em;
+}
+.back-page-one-body{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.back-page-one-header h2 {
+    font-size: 2rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+.back-page-one-header p {
+    font-family: "Nunito",san-serif;
+    font-size: 1em;
+}
+.back-page-one-header {
+    text-align: center;
+    margin: 15px;
+}
+.back.page-one {
+    background: #000000;
+    position: relative;
+    border: 5px solid #fefefe;
+    border-style: inset;
+}
+.portfolio-header-title h2 span {
+    color: #f6483b;
+}
+
 #close-about-me{
     position: absolute;
     z-index: 30;
@@ -247,8 +398,36 @@ div#close-portfolio:hover{
 .back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  background: #000000;
 }
-
+.back.page-three {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.front.page-four {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.back.page-five {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.front.page-six {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.back.page-seven {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.front.page-eigth {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
+.back.page-nine {
+    background: #000000;
+    border: 2px solid #fefefe;
+}
 .page.active {
   z-index: 1;
 }
@@ -260,15 +439,6 @@ div#close-portfolio:hover{
   z-index: 1;
 }
 
-.front img{
-    height: 100%;
-    width: 100%;
-}
-
-.back img{
-    height: 100%;
-    width: 100%;
-}
 .footer{
     background-color: transparent;
     line-height: 2rem;
@@ -315,6 +485,7 @@ div#close-portfolio:hover{
     float: left;
     max-height: 50%;
     padding: 15px;
+    text-transform: uppercase;
 } 
 .about-me-text button {
     margin: 10px 0px 10px 0px;
@@ -409,7 +580,29 @@ div#close-portfolio:hover{
     padding: 14px 50px 16px 50px;
     float: left;
 }
+.portfolio-quote-box p {
+    margin: 5px;
+}
+.portfolio-quote-box small {
+    float: right;
+    font-family: "Nunito",sans-serif;
+}
+.portfolio-quotes {
+    width: 100%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio-quote-box small {
+    float: right;
+    margin: 5px; 
+}
 
+.portfolio-quotes p {
+    font-family: "Nunito", sans-serif;
+}
 .my-strength-header h2 {
     text-align: center;
     font-size: 3rem;
@@ -592,6 +785,7 @@ input[type="text"] {
     font-size: 20px;
     background-color: #111111;
     border: none;
+    color: #fefefe;
 }
 input[type="email"] {
     width: 49%;
@@ -601,6 +795,7 @@ input[type="email"] {
     font-size: 20px;
     background-color: #111111;
     border: none;
+    color: #fefefe;
 }
 textarea#message {
     width: 49%;
@@ -610,6 +805,7 @@ textarea#message {
     font-size: 20px;
     background-color: #111111;
     border: none;
+    color: #fefefe;
 }
 input#submit {
     padding: 15px;
@@ -685,7 +881,7 @@ input#submit:hover {
 .about-me-text p {
     color: #666;
 }
-.strength-box-holder{
+.strength-box-holder{ 
   width: 100%;
   float: left;
   display: flex;
@@ -698,233 +894,116 @@ input#submit:hover {
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
 }
-/*----------------------------------------------------------------------slideshow-Strength*/
-.pic-wrapper {
-    position: absolute;
-    width: 25%;
-    height: 50%;
-    overflow: hidden;
+.left-content-image h2 {
+    display: none;
 }
-
-figure {
-  position: absolute;
-  top: 0;
-  left: 0;
+.left-content-image h3 {
+    display: none;
+}
+.contact-content-form-header h3 {
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    letter-spacing: 3px;
+}
+.about-me-content-right h2 {
+    display: none;
+}
+.about-me-content-right p {
+    display: none;
+}
+@media only screen and (max-width: 450px){
+.portfolio-header-title.shine-text {
+    display: none;
+}
+.about-me-text {
+    display: none;
+}
+.right-content-dev-name.shine-text {
+    display: none;
+}
+.front-page-two-header {
+    display: none;
+}
+.right-content-dev-name.shine-text {
+    display: none;
+}
+.right-content{
+  width: 0;
+}
+.left-content{
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  /*animation*/
-  
-  animation: slideShow 24s linear infinite 0s;
-  -o-animation: slideShow 24s linear infinite 0s;
-  -moz-animation: slideShow 24s linear infinite 0s;
-  -webkit-animation: slideShow 24s linear infinite 0s;
 }
-
-figurecaption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
+.left-content{
+  display: flex;
+  align-items: center;
 }
-
-.pic-1 {
-  opacity: 1;
-  background: url(../images/s1.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.about-me-content-left{
+  width: 0;
 }
-
-.pic-2 {
-  animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -moz--animation-delay: 6s;
-  -webkit-animation-delay: 6s;
-  background: url(../images/s2.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.pic-3 {
-  animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -moz--animation-delay: 12s;
-  -webkit-animation-delay: 12s;
-  background: url(../images/s3.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.pic-4 {
-  animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -moz--animation-delay: 18s;
-  -webkit-animation-delay: 18s;
-  background: url(../images/s4.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-/* keyframes*/
-
-@keyframes 
-slideShow {  0% {
- opacity: 0;
- transform:scale(1);
- -ms-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- transform:scale(1.1);
- -ms-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- transform:scale(1);
- -ms-transformm:scale(1);
-}
-}
- @-o-keyframes 
-slideShow {  0% {
- opacity: 0;
- -o-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -o-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -o-transformm:scale(1);
-}
-}
- @-moz-keyframes 
-slideShow {  0% {
- opacity: 0;
- -moz-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -moz-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -moz-transformm:scale(1);
-}
-}
- @-webkit-keyframes 
-slideShow {  0% {
- opacity: 0;
- -webkit-transform:scale(1);
-}
- 5% {
- opacity: 1
-}
- 25% {
- opacity: 1;
-}
- 30% {
- opacity: 0;
- -webkit-transform:scale(1.1);
-}
- 100% {
- opacity: 0;
- -webkit-transformm:scale(1);
-}
-}
-/*---------------------------------------------------------------------Portfolio*/
-html { height: 100%; overflow: hidden; }
-body { background: black; margin: 0; width: 100%; height: 100%; }
-
-.scene {
-    width: 100%;
-    height: 100vh;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-}
-.book {
-  position: relative;
+.about-me-content-right{
   width: 100%;
-  height: 100%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
 }
-.page {
-  cursor: pointer;
-  position: absolute;
-  color: black;
+.about-me-image {
+    float: right;
+    max-width: 100%
+}
+.left-content-image h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.left-content-image h3 {
+    text-align: center;
+    font-size: 1em;
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    display: block;
+}
+.about-me-content-right h2 {
+    display: block;
+}
+.about-me-content-right p {
+    display: block;
+    margin: 10px;
+    font-family: "Nunito",sans-serif;
+}
+.about-me-content-right h2 {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+}
+.about-me-content-right button {
+    padding: 10px;
+    margin: 10px;
+    font-family: "Nunito",sans-serif;
+    border: none;
+    background-color: #f6483b;
+    color: #fefefe;
+}
+.contact-content-form-header-left {
   width: 100%;
-  height: 100%;
-  -webkit-transition: 1.5s -webkit-transform;
-  transition: 1.5s transform;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;  
-  -webkit-transform-origin: left center;  
-  -ms-transform-origin: left center;  
-  transform-origin: left center;
 }
-.front,
-.back {
-  position: absolute;
+.contact{
+  height: 100%;
+  overflow-y: scroll;
+}
+.contact-content-form-header-right{
   width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: -webkit-gradient(linear, 0% 0%, 100% 100%, from(#FFFFFF), to(#CCCCCC));
-  background: -webkit-gradient(linear, left top, right bottom, from(#fff), to(#ccc));
-  background: -webkit-linear-gradient(top left, #fff, #ccc);
-  background: linear-gradient(to bottom right, #fff, #ccc);
 }
-.back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+input[type="email"] {
+  width: 100%;
 }
-
-.page.active {
-  z-index: 1;
-}
-.page.flipped {
-  -webkit-transform: rotateY(-180deg);
-  transform: rotateY(-180deg);
-}
-.page.flipped:last-of-type {
-  z-index: 1;
-}
-
-.front img{
-    height: 100%;
+input[type="text"] {
     width: 100%;
 }
+textarea#message{
+  width: 100%;
+}
 
-.back img{
-    height: 100%;
-    width: 100%;
 }
