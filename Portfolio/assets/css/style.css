@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 } 
 .clear:after{
-	content: "";
+	content: ""; 
 	display: block;
 	clear: both;
 }
@@ -310,7 +310,7 @@ h2{
 #close-contact{
     position: absolute;
     z-index: 30;
-    right: 0;
+    right: 20px;
     top: 0;
     color: #fefefe;
     font-size: 3rem;
@@ -319,7 +319,7 @@ h2{
 #close-strength{
     position: absolute;
     z-index: 30;
-    right: 0;
+    right: 20px;
     top: 0;
     color: #fefefe;
     font-size: 3rem;
@@ -328,7 +328,7 @@ h2{
 #close-about-me{
     position: absolute;
     z-index: 30;
-    right:0; 
+    right:20px; 
     top: 0;
     margin:10px;
 }
@@ -479,6 +479,7 @@ div#close-portfolio:hover{
     float: left;
     position: relative;
     width: 100%;
+    overflow-y: scroll;
 }
 .about-me-text {
     width: 100%;
@@ -487,8 +488,14 @@ div#close-portfolio:hover{
     padding: 15px;
     text-transform: uppercase;
 } 
+.about-me-section-two{
+    height: 100%;
+    width: 100%
+    float:left;
+    background-color: orange;
+}
 .about-me-text button {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 5px 10px 0px;
     padding: 10px;
     background-color: #f6483b;
     border: 1px solid #f6483b;
@@ -498,21 +505,18 @@ div#close-portfolio:hover{
     letter-spacing: 2px;
     cursor: pointer;
 }
-.about-me-text button:hover {
-    color: #f6483b;
-    background-color: #111111;
-}
+
 .about-me-content-right{
     width: 50%;
     background-color: #000000;
     align-items: center;
     height: 100%;
     float: left;
+    overflow: hidden;
     display: block;
     justify-content: flex-start;
 }
 .about-me-image {
-    max-width: 50%;
     float: right;
     max-height: 50%;
 }
@@ -536,7 +540,7 @@ div#close-portfolio:hover{
     font-weight: 400;
 }
 .about-me-text p {
-    font-size: 20px;
+    font-size: 1rem;
     font-family: "Nunito",sans-serif;
     overflow: hidden;
 }
@@ -552,6 +556,117 @@ div#close-portfolio:hover{
   background-color: orange;
   height: 100%;
 }
+.about-me-second-section{
+    float: left;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.about-me-education{
+    float: left;
+    width: 100%;
+    position: relative;
+    display: flex;
+    height: 25%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about-me-school-chmsc{
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    display: none;
+}
+.about-me-school-chmsc img {
+    height: 100%;
+    width: auto;
+    opacity: 0.2;
+}
+.about-me-school-chmsc-two{
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    display: none; 
+}
+.about-me-school-chmsc-two img{
+    height: 100%;
+    width: auto;
+    opacity: 0.2;;
+}
+.about-me-school-usls{
+    position: absolute;
+    height: 100%;
+    display: none;
+    z-index: -1;
+}
+.about-me-school-usls img{
+    height: 100%;
+    width: auto;
+    opacity: 0.2;
+}
+.about-me-school-tuitt{
+    position: absolute;
+    height: 100%;
+    display: none;
+    z-index: -1;
+}
+.about-me-school-tuitt img{
+    height: 100%;
+    width: auto;
+    opacity: 0.2;;
+}
+.about-me-education h2 {
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    color: #202020;
+}
+.about-me-education small {
+    font-family: "Nunito",sans-serif;
+}
+.about-me-footer {
+    width: 100%;
+    float: left;
+    height: 10vh;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #1f1d1d;
+}
+.about-me-footer-content {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-me-footer-content a {
+    text-decoration: none;
+    color: #fefefe;
+}
+.about-me-footer-content a:hover {
+    color: #fefefe;
+    cursor: pointer;
+    color: #f6483b
+}
+.about-me-footer-content ul li {
+    margin: 15px;
+    list-style-type: none;
+}
+.about-me-footer-content ul {
+    display: flex;
+}
+.about-me-footer-content p {
+    font-family: "Nunito",sans-serif;
+}
+.second-section-header h2 {
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+}
+.second-section-header {
+    width: 100%;
+    text-align: center;
+}
 .box-content-left{
     background-color: yellow;
     width: 300px;
@@ -564,13 +679,34 @@ div#close-portfolio:hover{
     width: 100%;
     height: 100vh;
     z-index: 20;
-    text-transform: uppercase;
     background-color: #000000;
 }
 .my-strength-content{
     width: 100%;
     height: 100%;
     position: relative;
+}
+.strength-expertise-container{
+    float: left;
+    width: 100%;
+    border:1px solid #000000;
+    height: 90vh;
+}
+.strength-expertise-box {
+    width: 33.33%;
+    height: 50vh;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.strength-expertise-circle{
+    width: 150px;
+    height: 150px;
+    border:1px solid green;
+    border-radius: 100%;
+    margin: 10px;
 }
 .portfolio-header{
     width: 100%;
@@ -587,35 +723,11 @@ div#close-portfolio:hover{
     float: right;
     font-family: "Nunito",sans-serif;
 }
-.portfolio-quotes {
-    width: 100%;
-    float: left;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.portfolio-quote-box small {
-    float: right;
-    margin: 5px; 
-}
-
-.portfolio-quotes p {
-    font-family: "Nunito", sans-serif;
-}
 .my-strength-header h2 {
     text-align: center;
     font-size: 3rem;
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
-}
-.contact-header{
-    width: 100%;
-    min-height: 50px;
-    background-color: #000000;
-    text-transform: uppercase;
-    padding: 14px 50px 16px 50px;
-    float: left;
 }
 .about-me-header{
     width: 100%;
@@ -658,6 +770,7 @@ div#close-portfolio:hover{
     position: absolute;
     left: -100%;
     z-index: 20;
+    overflow-y: scroll;
 }
 .contact {
     width: 100%;
@@ -675,6 +788,9 @@ p{
     width:100%;
     height: 100vh;
     position: relative;
+}
+.portfolio-slider{
+    display: none;
 }
 .portfolio-right-content{
     float: left;
@@ -718,8 +834,7 @@ button.download {
     height: 100%;
     position: relative;
     float: left;
-    display: flex;
-    justify-content: center;
+    overflow-y: scroll;
 }
 .contact-content-form {
     width: 100%;
@@ -729,10 +844,6 @@ button.download {
     font-size: 3rem;
     font-family: "Montserrat",sans-serif;
     font-weight: 400;
-    margin: 15px;
-}
-.center-text{
-  text-align: center;
 }
 small{
   color: #fefefe;
@@ -757,12 +868,52 @@ small{
 }
 .contact-content-map{
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     float: left;
+}
+.contact-pea{
+    width: 100%;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+}
+.contact-pea-content-box{
+    float: left;
+    width: 30%;
+    height:300px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-pea-content-box h2 {
+    position: absolute;
+    font-size: 2rem;
+    font-family: "Nunito",sans-serif;
+}
+.contact-pea-content-box img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+.contact-content-form h3 {
+    position: absolute;
+    font-size: 2rem;
+    font-family: "Nunito",sans-serif;
+    color: #fefefe;
+    z-index: 10;
+}
+.contact-pea-content-box h3{
+    display: none;
+}
+
+.contact-pea-content-box img:hover{
+    opacity: 0.5;
 }
 .contact-content-form-header-right{
     float: left;
-    width: 50%;
+    width: 100%;
     padding: 15px;
     height: 100%;
 }
@@ -824,24 +975,17 @@ input#submit:hover {
 }
 .my-strength-left-content{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     float: left;
+    overflow-y: scroll;
 }
 
 .box-content-my-strength {
     width: 100%;
-    height: 50px;
+    height: 10vh;
     float: left;
-    margin-top: 15px;
     text-align: center;
     text-transform: uppercase
-}
-.box-content-strength{
-  height: 250px;
-  width: 45%;
-  float: left;
-  margin:5px;
-  border-radius: 100%;
 }
 
 .box-text-content h2 {
@@ -860,34 +1004,125 @@ input#submit:hover {
     width: 100%;
     height: 100%;
 }
-.box-image-content{
-    width: 50%;
+.strength-first-section{
+    width: 100%;
     float: left;
+    height: 100vh;
+    background-color: #000000;
+}
+.strength-header-title{
+    float: left;
+    width: 100%;
+    height: 15vh;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.strength-content-left{
+    width: 100%;
+    height: 80vh;
+    float: left;
+    position: relative;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.strength-content-container{
+    width: 100%;
+    height: 80vh;
+    float: left;
+    position: relative;
+}
+.strength-content-right{
+    width: 100%;
+    height: 80vh;
+    float: left;
+    display: flex;
+    background-color: #000000;
+    flex-wrap: wrap;
+    justify-content: center;
+  /*  background-image: url(../images/strength.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position: center;;
+    background-attachment: scroll;*/
+}
+.strength-expertise-box img {
+    max-width: 50%;
+    max-height: 50%;
+}
+.strength-content-cover {
+    position: absolute;
+    float: left;
+    width: 0;
+    background-color: #000000;
+    height: 100%;
+}
+.strength-content-cover img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.strength-what-i-do{
+    width: 50vh;
+    height: 40vh;
+    float: left;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.strength-what-i-do h2{
+    font-family: "Nunito",san-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.strength-header-title h2 {
+    font-size: 3rem;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 400;
+}
+.strength-second-section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+}
+.strength-second-section-expertise{
+    width: 100%;
+    height: 100vh;
+    float: left;
+}
+.strength-second-section-expertise-title {
+    text-align: center;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+}
+.strength-second-section-expertise-title h2{
+    font-size: 2rem;
+    font-family: "Nunito",sans-serif;
+    font-weight: 400;
+    float: left;
 }
 .box-text-content{
   float: left;
   width: 50%;
   height: 100%;
 }
-.box-image-content img{
-    max-width: 100%;
-    max-height: 250px;
-}
 .contact-content-form-header-right h2 {
     margin-bottom: 15px;
 }
 .about-me-text p {
     color: #666;
-}
-.strength-box-holder{ 
-  width: 100%;
-  float: left;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 4rem;
 }
 .contact-content-form-header h2 {
     font-size: 3rem;
@@ -900,18 +1135,448 @@ input#submit:hover {
 .left-content-image h3 {
     display: none;
 }
-.contact-content-form-header h3 {
-    color: #fefefe;
-    font-family: "Nunito",sans-serif;
-    letter-spacing: 3px;
-}
 .about-me-content-right h2 {
     display: none;
 }
 .about-me-content-right p {
     display: none;
 }
-@media only screen and (max-width: 450px){
+.about-me-content-right button {
+    display: none;
+}
+.about-me-left-box{
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.about-me-right-box{
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav-bar-content h3{
+    color:#fefefe;
+}
+
+.about-me-box-inside-text{
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+.about-me-education h3 {
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    margin: 10px;
+}
+.about-me-education h2:hover {
+    color: #f6483b;
+    font-size: 4em;
+    cursor: pointer;
+}
+.about-me-box-inside-text-right{
+    width: 70%;
+    height: 100%;
+    float: left;
+    padding: 20px;
+    text-align: right;
+}
+.about-me-box-inside-right{
+    width: 30%;
+    float: left;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-me-box-inside-right h2{
+    color: #202020;
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.about-me-box-inside-text h3 {
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    font-size: 2rem;
+}
+.about-me-box-inside-text-right h3{
+    color: #fefefe;
+    font-family: "Nunito",sans-serif;
+    font-size: 2rem;
+}
+.about-me-box-inside-text p {
+    font-family: "Nunito",sans-serif;
+    font-size: 1.5rem;
+}
+.about-me-box-inside-text small {
+    font-family: "Nunito";
+}
+.about-me-box-inside-text-right p {
+    font-family: "Nunito",sans-serif;
+    font-size: 1.5rem;
+}
+.about-me-box-inside-text-right small {
+    font-family: "Nunito";
+}
+.contact-content-form-header {
+    width: 100%;
+    height: 20vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-left-side{
+    width: 50%;
+    float: left;
+    height: 90vh;
+}
+.contact-right-side{
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+.contact-content-form-header-right h2 {
+    font-size: 2rem;
+    font-family: "Nunito",sans-serif;
+}
+/*---------------------------------------------------------------------------------------------------------------------strength slideshow*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pic-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /*animation*/
+  
+  animation: slideShow 24s linear infinite 0s;
+  -o-animation: slideShow 24s linear infinite 0s;
+  -moz-animation: slideShow 24s linear infinite 0s;
+  -webkit-animation: slideShow 24s linear infinite 0s;
+}
+
+figurecaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+}
+
+.pic-1 {
+  opacity: 1;
+  background: url(../images/s5.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-2 {
+  animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -moz--animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  background: url(../images/s6.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-3 {
+  animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -moz--animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  background: url(../images/s7.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-4 {
+  animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -moz--animation-delay: 18s;
+  -webkit-animation-delay: 18s;
+  background: url(../images/s8.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* keyframes*/
+
+@keyframes 
+slideShow {  0% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ transform:scale(1.1);
+ -ms-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ transform:scale(1);
+ -ms-transformm:scale(1);
+}
+}
+ @-o-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -o-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -o-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -o-transformm:scale(1);
+}
+}
+ @-moz-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -moz-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -moz-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -moz-transformm:scale(1);
+}
+}
+ @-webkit-keyframes 
+slideShow {  0% {
+ opacity: 0;
+ -webkit-transform:scale(1);
+}
+ 5% {
+ opacity: 1
+}
+ 25% {
+ opacity: 1;
+}
+ 30% {
+ opacity: 0;
+ -webkit-transform:scale(1.1);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transformm:scale(1);
+}
+}
+/*---------------------------------------------------------------------------------------------------------------------TAB VIEW*/
+@media only screen and (max-width: 1024px){
+
+.right-content-dev-name h2 {
+    font-size: 3rem;
+}
+.about-me-footer-content p{
+    font-size: .7rem;
+}
+.strength-content-left {
+    width: 100%;
+}
+.strength-expertise-box img{
+    max-width: 80%;
+}
+.strength-content-container{
+    width: 100%;
+    height: 50vh;
+}
+.strength-content-cover {
+    width: 100% !important;
+    padding: 10px;
+}
+.strength-content-right{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.strength-content-left{
+    height: 80vh;
+}
+.strength-what-i-do{
+    height: unset;
+}
+.strength-content-cover img{
+    margin: 0;
+}
+.about-me-footer-content p{
+    font-size: 1rem;
+}
+.contact-pea {
+    flex-direction: column;
+}
+.contact-pea-content-box {
+    width: 100%;
+}
+.contact-pea-content-box {
+    height: 100%;
+}
+.contact-content-map{
+    height: 50vh;
+}
+.contact-left-side{
+    width: 100%;
+}
+.contact-right-side{
+    width: 100%;
+}
+.back-page-one-body-content-lakawon-text{
+    width: 100%;
+}
+.back-page-one-body-content-juanride-text{
+    width: 100%;
+}
+.back-page-one-body-content-lakawon{
+    width: 100%;
+}
+.back-page-one-body-content-juanride{
+    width: 100%;
+}
+}
+/*---------------------------------------------------------------------------------------------------------------------MOBILE VIEW*/
+@media only screen and (min-width: 320px) and (max-width: 450px){
+/*PORTFOLIO*/
+.portfolio-book-content {
+    display: none;
+}
+.portfolio-right-content{
+    width: 100%;
+}
+.portfolio-slider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+}
+.portfolio-slider .portfolio-slide-box{
+    min-width: 100%; /* needed so Firefox doesn't make img shrink to fit */
+    width: 100% /* can't take this out either as it breaks Chrome */
+}
+.portfolio-slider{
+    overflow-x: scroll;
+}
+.portfolio-right-side{
+    overflow-x: hidden;
+}
+.portfolio-slide-box{
+    width: 300px;
+    height: 300px;
+}
+.portfolio-slider .portfolio-slide-box{
+    height: 100%;
+}
+.back-page-one-body-content-lakawon-text{
+    width: 100%;
+}
+.back-page-one-body-content-juanride-text{
+    width: 100%;
+}
+.back-page-one-body-content-lakawon{
+    width: 100%;
+}
+.back-page-one-body-content-juanride{
+    width: 100%;
+}
+/*PORTFOLIO-END*/
+
+.contact-pea {
+    flex-direction: column;
+}
+.contact-pea-content-box {
+    width: 100%;
+}
+.strength-content-left{
+    width: 100%;
+    height: 50vh;
+}
+.strength-second-section{
+    height: 70%;
+}
+.strength-expertise-box img{
+    max-width: 80%;
+}
+.strength-content-container{
+    width: 100%;
+    height: 50vh;
+}
+.strength-expertise-box{
+    height: 25vh;
+}
+.strength-content-cover {
+    width: 100%;
+}
+.strength-content-right{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.strength-content-cover img{
+    margin: 10px 0px 10px 0px;
+}
+.strength-content-left{
+    height: 80vh;
+}
+.strength-what-i-do{
+    height: unset;
+}
+.left-content-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.left-content-image img{
+    width: 80%;
+}
 .portfolio-header-title.shine-text {
     display: none;
 }
@@ -1005,5 +1670,48 @@ input[type="text"] {
 textarea#message{
   width: 100%;
 }
-
+.about-me-image{
+    width: 100%;
+    float: right;
+}
+.contact-content-form-header-right .contact-how-text {
+    font-size: 2rem;
+}
+.about-me-image img {
+    height: 100%;
+    width: 100%;
+}
+.about-me-box-inside{
+    width: unset;
+}
+.about-me-box-inside-text {
+    width: 100%;
+    text-align: center;
+}
+.about-me-box-inside-text-right {
+    width: 100%;
+    text-align: center;
+}
+.about-me-box-inside-right {
+    width: unset;
+}
+.about-me-footer-content p{
+    font-size: .5rem;
+}
+.about-me-content-right h2 {
+    text-align: left;
+    text-transform: uppercase;
+    font-family: "Nunito",sans-serif;
+    color: #fefefe;
+}
+.about-me-content-right button {
+    display: block;
+    border:none;
+}
+.contact-left-side{
+    width: 100%;
+}
+.contact-right-side{
+    width: 100%;
+}
 }
